@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "PoisR3JLMkzvEGmro3ZdUjQBr6fw4BQUMd6j/djy2rlDfCquQ0C49W9diQJyV6X8wPUPLrAgDuP1wpHSalsnaA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Khaya\\Documents\\Workspace\\Technical Assessments\\LunchBox\\Simple_API_Assessment\\Simple_API_Assessment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Khaya\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Khaya\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Khaya\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Khaya\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Khaya\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Khaya\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
