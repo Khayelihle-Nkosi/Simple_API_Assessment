@@ -39,6 +39,7 @@ public class DataContext : DbContext {
 		modelBuilder.Entity<Skill>().HasData(
 			new Skill() { Id = 1, Name = "C# Development", ApplicantId = 1L },
 			new Skill() { Id = 2, Name = ".Net Core", ApplicantId = 1L },
-			new Skill() { Id = 3, Name = "Entity Framework", ApplicantId = 1L });
+			new Skill() { Id = 3, Name = "Entity Framework", ApplicantId = 1L }
+		);
 	}
 }

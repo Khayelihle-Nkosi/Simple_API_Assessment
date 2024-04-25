@@ -1,15 +1,21 @@
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Simple_API_Assessment.Data;
+using Simple_API_Assessment.Data.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x => 
+	x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(options =>
 	options.UseNpgsql(
 		builder.Configuration.GetConnectionString("DefaultConnection")!));
+
+builder.Services.AddScoped<IApplicantRepository, ApplicantRepo>();
 
 var app = builder.Build();
 
