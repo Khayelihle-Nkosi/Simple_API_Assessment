@@ -11,8 +11,8 @@ public class ApplicantRepo : IApplicantRepository {
 		_context = context;
 	}
 
-	public Task<IEnumerable<Applicant>> GetAllApplicants() {
-		return Task.FromResult<IEnumerable<Applicant>>(_context.Applicants.Include("Skills").ToList());
+	public async Task<IEnumerable<Applicant>> GetAllApplicants() {
+		return await Task.FromResult<IEnumerable<Applicant>>(_context.Applicants.Include("Skills").ToList());
 	}
 
 	public async Task<Applicant?> GetApplicantById(long id) {
@@ -58,12 +58,11 @@ public class ApplicantRepo : IApplicantRepository {
 	public async Task<bool> DeleteApplicant(long id) {
 		var applicant = await _context.Applicants.FindAsync(id);
 
-		if (applicant != null) {
-			_context.Applicants.Remove(applicant);
-			var res = await _context.SaveChangesAsync();
-			return res > 0;
-		}
+		if (applicant == null) throw new ValidationException("Applicant with the Id: " + id + " does not exists");
+		
+		_context.Applicants.Remove(applicant);
+		var res = await _context.SaveChangesAsync();
+		return res > 0;
 
-		throw new ValidationException("Applicant with the Id: " + id + " does not exists");
 	}
 }
